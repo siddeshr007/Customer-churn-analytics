@@ -2,9 +2,9 @@
 
 This project analyzes telecom customer churn using:
 
-    - **Python / scikit-learn** for data prep and machine learning
-    - **Tableau Public** for an interactive churn risk dashboard
-    - **BA-style documentation** for insights and business recommendations
+    - Python / scikit-learn for data prep and machine learning
+    - Tableau Public for an interactive churn risk dashboard
+    - BA-style documentation for insights and business recommendations
 
 The goal is to predict which customers are likely to churn and translate those predictions into clear, actionable steps for a retention team.
 
@@ -54,6 +54,8 @@ After cleaning
     * Total customers: ~7,043
     * Churn rate: ~26–27% of customers
 
+---
+
 ## 🧮 Modeling (notebooks/01_churn_model.ipynb)
 * Preprocessing
 In the notebook, the data is loaded and prepared:
@@ -84,6 +86,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 ```
 * Model
+
 - Algorithm
     - Logistic Regression (sklearn.linear_model.LogisticRegression)
     - Parameters: max_iter = 1000
@@ -135,9 +138,11 @@ X_test_copy.to_csv("data/processed/churn_scored.csv", index=False)
 ```
 
 "data/processed/churn_scored.csv" includes:
+
     - churn_actual (0/1) – true churn flag
     - churn_probability (0–1) – predicted probability of churn
     - All original feature columns for each test customer
+    
 This file is the data source for the Tableau dashboard.
 
 ---
@@ -165,7 +170,7 @@ The dashboard is exported as an image for quick preview.
 
 Below is a preview of the Tableau churn dashboard built from the scored dataset:
 
-For full interactivity, open the Tableau workbook and connect it to data/processed/churn_scored.csv.
+![Customer Churn Dashboard](docs/churn_dashboard.png)
 
 ---
 
@@ -188,7 +193,7 @@ For full interactivity, open the Tableau workbook and connect it to data/process
     - Focus retention outreach on the top-risk deciles rather than treating all customers the same.
 A narrative version of these findings is documented in:
 
-## 📄 docs/churn_report.md
+📄 docs/churn_report.md
 
 ---
 
@@ -209,7 +214,9 @@ A narrative version of these findings is documented in:
     - Framing the business problem
     - Translating model outputs into actionable recommendations
 
-🚀 How to Run Locally
+---
+
+## 🚀 How to Run Locally
 
 * Clone the repo
 ```
@@ -245,4 +252,5 @@ jupyter notebook notebooks/01_churn_model.ipynb
 ##✍️ Author
 
 Sai Siddesh Reddy Bynigeri
+
 Business / Data Analyst – Python, SQL, Tableau, Excel
