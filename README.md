@@ -1,4 +1,4 @@
-# Customer Churn Analytics (Telecom)
+## Customer Churn Analytics (Telecom)
 
 End-to-end customer churn project combining **Python (ML)** and **Tableau (BI)**.
 
@@ -31,7 +31,7 @@ I trained a **logistic regression model** on a public telco churn dataset, score
 
 ## 3. Project Structure
 
-```bash
+```
 customer-churn-analytics/
 ├─ data/
 │  ├─ raw/
@@ -48,8 +48,10 @@ customer-churn-analytics/
 ├─ .gitignore
 └─ README.md
 If your filenames differ slightly, that’s fine—just tweak the paths above.
+```
+---
 
-4. Data
+## 4. Data
 Source: Public telco customer churn dataset (e.g., Kaggle).
 Each row = one customer, with fields like:
 
@@ -67,7 +69,9 @@ Total rows: ~7,043 customers
 
 Churn rate: ~26–27% of customers
 
-5. Modeling Steps (Notebook: 01_churn_model.ipynb)
+---
+
+## 5. Modeling Steps (Notebook: 01_churn_model.ipynb)
 5.1. Preprocessing
 Loaded the raw CSV:
 
@@ -119,7 +123,9 @@ ROC-AUC: ~0.84
 
 These numbers mean the model is reasonably strong at separating churners from non-churners.
 
-6. Feature Importance (Key Drivers)
+---
+
+## 6. Feature Importance (Key Drivers)
 From the logistic regression coefficients and follow-up analysis:
 
 Tenure
@@ -144,7 +150,9 @@ Certain payment methods (e.g., electronic check) show higher churn than others (
 
 These drivers are visualized in Tableau.
 
-7. Scored Dataset
+---
+
+## 7. Scored Dataset
 I exported model scores for the test set:
 
 python
@@ -198,7 +206,9 @@ Below is a preview of the Tableau churn dashboard built from the scored dataset:
 
 [Customer Churn Dashboard](churn_dashboard.png)
 
-9. How to Run Locally
+---
+
+## 9. How to Run Locally
 Clone the repo
 
 bash
@@ -232,7 +242,9 @@ Connect to data/processed/churn_scored.csv.
 
 Recreate or refresh the dashboard.
 
-10. Business Takeaways (Summary)
+---
+
+## 10. Business Takeaways (Summary)
 The model can reliably rank customers by churn risk (ROC-AUC ≈ 0.84).
 
 Churn is concentrated among:
@@ -244,6 +256,8 @@ With higher monthly charges, and
 Certain payment methods (e.g., electronic check).
 
 Targeted retention programs focused on these segments can reduce churn and protect recurring revenue.
+
+---
 
 For a more narrative, BA-style explanation, see:
 👉 docs/churn_report.md
