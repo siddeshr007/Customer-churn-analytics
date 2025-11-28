@@ -171,7 +171,7 @@ churn_probability (0–1)
 
 plus the original features for each customer in the test set.
 
-8. Tableau Dashboard
+## 8. Tableau Dashboard
 Dashboard views (built on churn_scored.csv):
 
 Churn Probability Distribution
