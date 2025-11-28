@@ -249,7 +249,7 @@ jupyter notebook notebooks/01_churn_model.ipynb
 
 ---
 
-##✍️ Author
+## ✍️ Author
 
 Sai Siddesh Reddy Bynigeri
 
