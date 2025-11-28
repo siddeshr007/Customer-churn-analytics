@@ -204,7 +204,7 @@ Optional: exported as docs/churn_dashboard.png and referenced below.
 
 Below is a preview of the Tableau churn dashboard built from the scored dataset:
 
-[Customer Churn Dashboard](churn_dashboard.png)
+![Customer Churn Dashboard](churn_dashboard.png)
 
 ---
 
