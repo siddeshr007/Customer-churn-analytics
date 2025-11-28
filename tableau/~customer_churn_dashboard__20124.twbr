@@ -1,0 +1,1319 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0514.2217                               -->
+<workbook original-version='18.1' source-build='2025.2.0 (20252.25.0514.2217)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='churn_scored_readable' inline='true' name='federated.1b0g63a11bott11cyy8yd1jb9483' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='churn_scored_readable' name='textscan.00fvxt51f5ixkr148x5v61fiexad'>
+            <connection class='textscan' directory='C:/Users/bynigeri/OneDrive - UAB - The University of Alabama at Birmingham/Documents/Analyst Projects/Customer churn analytics/data/processed' filename='churn_scored_readable.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.00fvxt51f5ixkr148x5v61fiexad' name='churn_scored_readable.csv' table='[churn_scored_readable#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='customerid' ordinal='0' />
+            <column datatype='string' name='gender' ordinal='1' />
+            <column datatype='integer' name='seniorcitizen' ordinal='2' />
+            <column datatype='string' name='partner' ordinal='3' />
+            <column datatype='string' name='dependents' ordinal='4' />
+            <column datatype='integer' name='tenure' ordinal='5' />
+            <column datatype='string' name='phoneservice' ordinal='6' />
+            <column datatype='string' name='multiplelines' ordinal='7' />
+            <column datatype='string' name='internetservice' ordinal='8' />
+            <column datatype='string' name='onlinesecurity' ordinal='9' />
+            <column datatype='string' name='onlinebackup' ordinal='10' />
+            <column datatype='string' name='deviceprotection' ordinal='11' />
+            <column datatype='string' name='techsupport' ordinal='12' />
+            <column datatype='string' name='streamingtv' ordinal='13' />
+            <column datatype='string' name='streamingmovies' ordinal='14' />
+            <column datatype='string' name='contract' ordinal='15' />
+            <column datatype='string' name='paperlessbilling' ordinal='16' />
+            <column datatype='string' name='paymentmethod' ordinal='17' />
+            <column datatype='real' name='monthlycharges' ordinal='18' />
+            <column datatype='real' name='totalcharges' ordinal='19' />
+            <column datatype='integer' name='churn' ordinal='20' />
+            <column datatype='integer' name='churn_actual' ordinal='21' />
+            <column datatype='real' name='churn_probability' ordinal='22' />
+            <column datatype='string' name='tenure_band' ordinal='23' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>customerid</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[customerid]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>customerid</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seniorcitizen</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[seniorcitizen]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>seniorcitizen</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>partner</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[partner]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>partner</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dependents</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[dependents]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>dependents</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tenure</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tenure]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>tenure</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>phoneservice</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[phoneservice]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>phoneservice</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>multiplelines</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[multiplelines]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>multiplelines</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>internetservice</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[internetservice]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>internetservice</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>onlinesecurity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[onlinesecurity]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>onlinesecurity</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>onlinebackup</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[onlinebackup]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>onlinebackup</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>deviceprotection</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[deviceprotection]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>deviceprotection</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>techsupport</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[techsupport]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>techsupport</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>streamingtv</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[streamingtv]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>streamingtv</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>streamingmovies</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[streamingmovies]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>streamingmovies</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contract</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[contract]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>contract</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>paperlessbilling</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[paperlessbilling]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>paperlessbilling</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>paymentmethod</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[paymentmethod]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>paymentmethod</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>monthlycharges</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[monthlycharges]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>monthlycharges</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>totalcharges</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[totalcharges]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>totalcharges</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>churn</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[churn]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>churn</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>churn_actual</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[churn_actual]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>churn_actual</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>churn_probability</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[churn_probability]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>churn_probability</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tenure_band</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tenure_band]</local-name>
+            <parent-name>[churn_scored_readable.csv]</parent-name>
+            <remote-alias>tenure_band</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Churn Probability (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='-2' formula='[churn_probability]' peg='0' size='0.0236' />
+      </column>
+      <column caption='churn_scored_readable.csv' datatype='table' name='[__tableau_internal_object_id__].[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]' role='measure' type='quantitative' />
+      <column caption='Churn' datatype='integer' name='[churn]' role='measure' type='quantitative' />
+      <column caption='Churn Actual' datatype='integer' name='[churn_actual]' role='measure' type='quantitative' />
+      <column caption='Churn Probability' datatype='real' name='[churn_probability]' role='measure' type='ordinal' />
+      <column caption='Contract' datatype='string' name='[contract]' role='dimension' type='nominal' />
+      <column caption='Customerid' datatype='string' name='[customerid]' role='dimension' type='nominal' />
+      <column caption='Dependents' datatype='string' name='[dependents]' role='dimension' type='nominal' />
+      <column caption='Deviceprotection' datatype='string' name='[deviceprotection]' role='dimension' type='nominal' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Internetservice' datatype='string' name='[internetservice]' role='dimension' type='nominal' />
+      <column caption='Monthlycharges' datatype='real' name='[monthlycharges]' role='measure' type='quantitative' />
+      <column caption='Multiplelines' datatype='string' name='[multiplelines]' role='dimension' type='nominal' />
+      <column caption='Onlinebackup' datatype='string' name='[onlinebackup]' role='dimension' type='nominal' />
+      <column caption='Onlinesecurity' datatype='string' name='[onlinesecurity]' role='dimension' type='nominal' />
+      <column caption='Paperlessbilling' datatype='string' name='[paperlessbilling]' role='dimension' type='nominal' />
+      <column caption='Partner' datatype='string' name='[partner]' role='dimension' type='nominal' />
+      <column caption='Paymentmethod' datatype='string' name='[paymentmethod]' role='dimension' type='nominal' />
+      <column caption='Phoneservice' datatype='string' name='[phoneservice]' role='dimension' type='nominal' />
+      <column caption='Seniorcitizen' datatype='integer' name='[seniorcitizen]' role='measure' type='quantitative' />
+      <column caption='Streamingmovies' datatype='string' name='[streamingmovies]' role='dimension' type='nominal' />
+      <column caption='Streamingtv' datatype='string' name='[streamingtv]' role='dimension' type='nominal' />
+      <column caption='Techsupport' datatype='string' name='[techsupport]' role='dimension' type='nominal' />
+      <column caption='Tenure' datatype='integer' name='[tenure]' role='measure' type='quantitative' />
+      <column caption='Tenure Band' datatype='string' name='[tenure_band]' role='dimension' type='nominal' />
+      <column caption='Totalcharges' datatype='real' name='[totalcharges]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/bynigeri/AppData/Local/Temp/TableauTemp/#TableauTemp_0i30j6l1wc1n3n11o6q7p14tuwqk.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/28/2025 02:42:18 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>customerid</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[customerid]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>customerid</remote-alias>
+              <ordinal>0</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1407</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gender</remote-alias>
+              <ordinal>1</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>seniorcitizen</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[seniorcitizen]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>seniorcitizen</remote-alias>
+              <ordinal>2</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>partner</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[partner]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>partner</remote-alias>
+              <ordinal>3</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dependents</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[dependents]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>dependents</remote-alias>
+              <ordinal>4</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tenure</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[tenure]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tenure</remote-alias>
+              <ordinal>5</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>72</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>phoneservice</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[phoneservice]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>phoneservice</remote-alias>
+              <ordinal>6</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>multiplelines</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[multiplelines]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>multiplelines</remote-alias>
+              <ordinal>7</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>internetservice</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[internetservice]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>internetservice</remote-alias>
+              <ordinal>8</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>onlinesecurity</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[onlinesecurity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>onlinesecurity</remote-alias>
+              <ordinal>9</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>onlinebackup</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[onlinebackup]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>onlinebackup</remote-alias>
+              <ordinal>10</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>deviceprotection</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[deviceprotection]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>deviceprotection</remote-alias>
+              <ordinal>11</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>techsupport</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[techsupport]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>techsupport</remote-alias>
+              <ordinal>12</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>streamingtv</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[streamingtv]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>streamingtv</remote-alias>
+              <ordinal>13</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>streamingmovies</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[streamingmovies]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>streamingmovies</remote-alias>
+              <ordinal>14</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>contract</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[contract]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>contract</remote-alias>
+              <ordinal>15</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>paperlessbilling</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[paperlessbilling]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>paperlessbilling</remote-alias>
+              <ordinal>16</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>paymentmethod</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[paymentmethod]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>paymentmethod</remote-alias>
+              <ordinal>17</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>monthlycharges</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[monthlycharges]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>monthlycharges</remote-alias>
+              <ordinal>18</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>740</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>totalcharges</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[totalcharges]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>totalcharges</remote-alias>
+              <ordinal>19</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1260</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>churn</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[churn]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>churn</remote-alias>
+              <ordinal>20</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>churn_actual</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[churn_actual]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>churn_actual</remote-alias>
+              <ordinal>21</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>churn_probability</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[churn_probability]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>churn_probability</remote-alias>
+              <ordinal>22</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1393</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tenure_band</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[tenure_band]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tenure_band</remote-alias>
+              <ordinal>23</ordinal>
+              <family>churn_scored_readable.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='churn_scored_readable.csv' id='churn_scored_readable.csv_00EE6330103943E783B8545EF67DCA3E'>
+            <properties context=''>
+              <relation connection='textscan.00fvxt51f5ixkr148x5v61fiexad' name='churn_scored_readable.csv' table='[churn_scored_readable#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='customerid' ordinal='0' />
+                  <column datatype='string' name='gender' ordinal='1' />
+                  <column datatype='integer' name='seniorcitizen' ordinal='2' />
+                  <column datatype='string' name='partner' ordinal='3' />
+                  <column datatype='string' name='dependents' ordinal='4' />
+                  <column datatype='integer' name='tenure' ordinal='5' />
+                  <column datatype='string' name='phoneservice' ordinal='6' />
+                  <column datatype='string' name='multiplelines' ordinal='7' />
+                  <column datatype='string' name='internetservice' ordinal='8' />
+                  <column datatype='string' name='onlinesecurity' ordinal='9' />
+                  <column datatype='string' name='onlinebackup' ordinal='10' />
+                  <column datatype='string' name='deviceprotection' ordinal='11' />
+                  <column datatype='string' name='techsupport' ordinal='12' />
+                  <column datatype='string' name='streamingtv' ordinal='13' />
+                  <column datatype='string' name='streamingmovies' ordinal='14' />
+                  <column datatype='string' name='contract' ordinal='15' />
+                  <column datatype='string' name='paperlessbilling' ordinal='16' />
+                  <column datatype='string' name='paymentmethod' ordinal='17' />
+                  <column datatype='real' name='monthlycharges' ordinal='18' />
+                  <column datatype='real' name='totalcharges' ordinal='19' />
+                  <column datatype='integer' name='churn' ordinal='20' />
+                  <column datatype='integer' name='churn_actual' ordinal='21' />
+                  <column datatype='real' name='churn_probability' ordinal='22' />
+                  <column datatype='string' name='tenure_band' ordinal='23' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='By Contract'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>By Contract</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='churn_scored_readable' name='federated.1b0g63a11bott11cyy8yd1jb9483' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1b0g63a11bott11cyy8yd1jb9483'>
+            <column-instance column='[churn_probability]' derivation='Avg' name='[avg:churn_probability:ok]' pivot='key' type='ordinal' />
+            <column caption='Churn Probability' datatype='real' name='[churn_probability]' role='measure' type='ordinal' />
+            <column caption='Contract' datatype='string' name='[contract]' role='dimension' type='nominal' />
+            <column-instance column='[contract]' derivation='None' name='[none:contract:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1b0g63a11bott11cyy8yd1jb9483].[none:contract:nk]' value='175' />
+            <format attr='text-format' field='[federated.1b0g63a11bott11cyy8yd1jb9483].[avg:churn_probability:ok]' value='p0.0%' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1b0g63a11bott11cyy8yd1jb9483].[avg:churn_probability:ok]' value='p0.0%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1b0g63a11bott11cyy8yd1jb9483].[avg:churn_probability:ok]</rows>
+        <cols>[federated.1b0g63a11bott11cyy8yd1jb9483].[none:contract:nk]</cols>
+      </table>
+      <simple-id uuid='{03FFA010-3026-4939-84FC-D578F471DCDB}' />
+    </worksheet>
+    <worksheet name='By Payment'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>By Payment</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='churn_scored_readable' name='federated.1b0g63a11bott11cyy8yd1jb9483' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1b0g63a11bott11cyy8yd1jb9483'>
+            <column-instance column='[churn_probability]' derivation='Avg' name='[avg:churn_probability:ok]' pivot='key' type='ordinal' />
+            <column caption='Churn Probability' datatype='real' name='[churn_probability]' role='measure' type='ordinal' />
+            <column-instance column='[paymentmethod]' derivation='None' name='[none:paymentmethod:nk]' pivot='key' type='nominal' />
+            <column caption='Paymentmethod' datatype='string' name='[paymentmethod]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1b0g63a11bott11cyy8yd1jb9483].[avg:churn_probability:ok]' value='p0.0%' />
+            <format attr='width' field='[federated.1b0g63a11bott11cyy8yd1jb9483].[none:paymentmethod:nk]' value='132' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1b0g63a11bott11cyy8yd1jb9483].[avg:churn_probability:ok]' value='p0.0%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1b0g63a11bott11cyy8yd1jb9483].[avg:churn_probability:ok]</rows>
+        <cols>[federated.1b0g63a11bott11cyy8yd1jb9483].[none:paymentmethod:nk]</cols>
+      </table>
+      <simple-id uuid='{91182790-8C65-40FA-9E60-F6D60F922405}' />
+    </worksheet>
+    <worksheet name='By Tenure'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>By Tenure</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='churn_scored_readable' name='federated.1b0g63a11bott11cyy8yd1jb9483' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1b0g63a11bott11cyy8yd1jb9483'>
+            <column-instance column='[churn_probability]' derivation='Avg' name='[avg:churn_probability:ok]' pivot='key' type='ordinal' />
+            <column caption='Churn Probability' datatype='real' name='[churn_probability]' role='measure' type='ordinal' />
+            <column-instance column='[tenure_band]' derivation='None' name='[none:tenure_band:nk]' pivot='key' type='nominal' />
+            <column caption='Tenure Band' datatype='string' name='[tenure_band]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1b0g63a11bott11cyy8yd1jb9483].[avg:churn_probability:ok]' value='p0.0%' />
+            <format attr='width' field='[federated.1b0g63a11bott11cyy8yd1jb9483].[none:tenure_band:nk]' value='104' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1b0g63a11bott11cyy8yd1jb9483].[avg:churn_probability:ok]' value='p0.0%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1b0g63a11bott11cyy8yd1jb9483].[avg:churn_probability:ok]</rows>
+        <cols>[federated.1b0g63a11bott11cyy8yd1jb9483].[none:tenure_band:nk]</cols>
+      </table>
+      <simple-id uuid='{AF3B8ECE-28DA-4972-B3B4-779CC89B4D01}' />
+    </worksheet>
+    <worksheet name='Churn Probability Dist'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book'>Churn Probability Distribution</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='churn_scored_readable' name='federated.1b0g63a11bott11cyy8yd1jb9483' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1b0g63a11bott11cyy8yd1jb9483'>
+            <column datatype='integer' name='[Churn Probability (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='-2' formula='[churn_probability]' peg='0' size='0.0236' />
+            </column>
+            <column caption='Churn Probability' datatype='real' name='[churn_probability]' role='measure' type='ordinal' />
+            <column-instance column='[Churn Probability (bin)]' derivation='None' name='[none:Churn Probability (bin):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[churn_probability]' derivation='Count' name='[pcto:cnt:churn_probability:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[churn_probability]' derivation='Sum' name='[sum:churn_probability:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1b0g63a11bott11cyy8yd1jb9483].[sum:churn_probability:ok]' value='p0.0%' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1b0g63a11bott11cyy8yd1jb9483].[none:Churn Probability (bin):qk]' value='p0.0%' />
+            <format attr='text-format' field='[federated.1b0g63a11bott11cyy8yd1jb9483].[sum:churn_probability:ok]' value='p0.0%' />
+            <format attr='text-format' field='[federated.1b0g63a11bott11cyy8yd1jb9483].[pcto:cnt:churn_probability:qk]' value='p0.0%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <text column='[federated.1b0g63a11bott11cyy8yd1jb9483].[sum:churn_probability:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1b0g63a11bott11cyy8yd1jb9483].[pcto:cnt:churn_probability:qk]</rows>
+        <cols>[federated.1b0g63a11bott11cyy8yd1jb9483].[none:Churn Probability (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.1b0g63a11bott11cyy8yd1jb9483].[Churn Probability (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{6EA61464-CCD8-4268-ACE8-2955986AAF70}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Customer Churn Risk Overview – Telecom'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='61921' id='3' name='Churn Probability Dist' w='59020' x='483' y='999'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='28462' id='5' name='By Contract' w='40014' x='59503' y='999'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='36081' id='6' name='By Tenure' w='40014' x='59503' y='62920'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='33459' id='7' name='By Payment' w='40014' x='59503' y='29461'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='36081' id='8' type-v2='text' w='59020' x='483' y='62920'>
+            <formatted-text>
+              <run bold='true' fontalignment='1' underline='true'>Model Performance (Logistic Regression)</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run>
+Accuracy: 80%
+Precision (churn): 65%
+Recall (churn): 57%
+ROC-AUC: 0.84
+
+Interpretation:
+• The model is reasonably accurate overall.
+• Precision 65% → when we flag a customer as high-risk, we’re right ~65% of the time.
+• Recall 57% → we’re catching about half of all actual churners.
+• ROC-AUC 0.84 → strong separation between churners and non-churners.
+</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1150' minheight='1150' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='12' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98002' id='11' param='vert' type-v2='layout-flow' w='99034' x='483' y='999'>
+                <zone fixed-size='280' h='61921' id='3' is-fixed='true' name='Churn Probability Dist' w='59020' x='483' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='220' h='28462' id='5' is-fixed='true' name='By Contract' w='40014' x='59503' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='259' h='33459' id='7' is-fixed='true' name='By Payment' w='40014' x='59503' y='29461'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='36081' id='8' type-v2='text' w='59020' x='483' y='62920'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' underline='true'>Model Performance (Logistic Regression)</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run>
+Accuracy: 80%
+Precision (churn): 65%
+Recall (churn): 57%
+ROC-AUC: 0.84
+
+Interpretation:
+• The model is reasonably accurate overall.
+• Precision 65% → when we flag a customer as high-risk, we’re right ~65% of the time.
+• Recall 57% → we’re catching about half of all actual churners.
+• ROC-AUC 0.84 → strong separation between churners and non-churners.
+</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36081' id='6' is-fixed='true' name='By Tenure' w='40014' x='59503' y='62920'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{93B5C27C-02CD-4E12-A559-01EB21D4AE5E}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Churn Probability Dist'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5393FFEE-5D6D-45DD-ACBB-2DB90DA42299}' />
+    </window>
+    <window class='worksheet' name='By Contract'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5F1ED18F-C541-4896-9E0C-1F6945F5B133}' />
+    </window>
+    <window class='worksheet' name='By Tenure'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{04B99867-1850-4296-9948-1293D773744C}' />
+    </window>
+    <window class='worksheet' maximized='true' name='By Payment'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F497CF77-8736-4A50-B460-C97ADAB89FAC}' />
+    </window>
+    <window class='dashboard' name='Customer Churn Risk Overview – Telecom'>
+      <viewpoints>
+        <viewpoint name='By Contract' />
+        <viewpoint name='By Payment' />
+        <viewpoint name='By Tenure' />
+        <viewpoint name='Churn Probability Dist'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{D3E2828E-9BE7-4938-AA4F-5D800D476F42}' />
+    </window>
+  </windows>
+</workbook>
