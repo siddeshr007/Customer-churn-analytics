@@ -196,7 +196,7 @@ Optional: exported as docs/churn_dashboard.png and referenced below.
 
 Below is a preview of the Tableau churn dashboard built from the scored dataset:
 
-![Customer Churn Dashboard](docs/Customer Churn Risk Overview – Telecom.png)
+[Customer Churn Dashboard](docs/churn_dashboard)
 
 9. How to Run Locally
 Clone the repo
