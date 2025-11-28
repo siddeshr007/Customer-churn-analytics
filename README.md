@@ -7,7 +7,7 @@ Predict which telecom customers are likely to churn and translate the model into
 
 ---
 
-## 1. Project Overview
+## 1. Project Overview 
 
 This project answers three main questions:
 
