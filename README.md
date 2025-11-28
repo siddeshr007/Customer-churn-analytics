@@ -7,29 +7,29 @@ Predict which telecom customers are likely to churn and translate the model into
 
 ---
 
-## 1. Project Overview 
+## Project Overview 
 
 This project answers three main questions:
 
-1. **Who is most likely to churn?**
-2. **What are the key drivers of churn?**
-3. **How can the business act on these insights?**
+* **Who is most likely to churn?**
+* **What are the key drivers of churn?**
+* **How can the business act on these insights?**
 
 I trained a **logistic regression model** on a public telco churn dataset, scored customers with churn probabilities, and visualized key patterns in a Tableau dashboard.
 
 ---
 
-## 2. Tech Stack
+## Tech Stack
 
-- **Language:** Python 3
-- **Libraries:** pandas, numpy, scikit-learn, joblib
-- **ML Model:** Logistic Regression
-- **Visualization:** Tableau Public (and/or Excel)
-- **Version control:** Git + GitHub
+* **Language:** Python 3
+* **Libraries:** pandas, numpy, scikit-learn, joblib
+* **ML Model:** Logistic Regression
+* **Visualization:** Tableau Public (and/or Excel)
+* **Version control:** Git + GitHub
 
 ---
 
-## 3. Project Structure
+## Project Structure
 
 ```
 customer-churn-analytics/
@@ -51,8 +51,8 @@ If your filenames differ slightly, that’s fine—just tweak the paths above.
 ```
 ---
 
-## 4. Data
-Source: Public telco customer churn dataset (e.g., Kaggle).
+## Data
+Source: Public telco customer churn dataset (Kaggle).
 Each row = one customer, with fields like:
 
 Customer info: customerID, gender, senior citizen, dependents
@@ -71,105 +71,75 @@ Churn rate: ~26–27% of customers
 
 ---
 
-## 5. Modeling Steps (Notebook: 01_churn_model.ipynb)
-5.1. Preprocessing
-Loaded the raw CSV:
+## Modeling Steps (Notebook: 01_churn_model.ipynb)
 
-python
-Copy code
-df = pd.read_csv("data/raw/telco_churn_raw.csv")
-Cleaned / prepared:
-
-Standardized column names (lowercase, underscores).
-
-Converted TotalCharges to numeric and dropped rows with bad/missing values.
-
-Encoded Churn as:
-
-Yes → 1 (churner)
-
-No → 0 (non-churner)
-
-One-hot encoded categorical features with pd.get_dummies(drop_first=True).
-
-Train–test split:
-
-python
-Copy code
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y,
-    test_size=0.2,
-    random_state=42,
-    stratify=y
-)
-5.2. Model
-Algorithm: Logistic Regression (sklearn.linear_model.LogisticRegression)
-
-Parameters: max_iter=1000
-
-Evaluation metrics on the test set:
-
-Accuracy: ~80%
-
-Class 1 (Churn)
-
-Precision ≈ 65%
-
-Recall ≈ 57%
-
-F1-score ≈ 0.61
-
-ROC-AUC: ~0.84
-
-These numbers mean the model is reasonably strong at separating churners from non-churners.
+* Preprocessing
+    - Loaded the raw CSV:
+        df = pd.read_csv("data/raw/telco_churn_raw.csv")
+    - Cleaned/prepared:
+        Standardized column names (lowercase, underscores).
+        Converted TotalCharges to numeric and dropped rows with bad/missing values.
+    - Encoded Churn as:
+        Yes → 1 (churner)
+        No → 0 (non-churner)
+        One-hot encoded categorical features with pd.get_dummies(drop_first=True).
+    - Train–test split:
+~~~
+        python
+        Copy code
+        X_train, X_test, y_train, y_test = train_test_split(
+            X, y,
+            test_size=0.2,
+            random_state=42,
+            stratify=y
+        )
+ ~~~
+* Model Algorithm 
+    - Logistic Regression (sklearn.linear_model.LogisticRegression)
+    - Parameters: max_iter=1000
+    - Evaluation metrics on the test set:
+        - Accuracy: ~80%
+        - Class 1 (Churn)
+        - Precision ≈ 65%
+        - Recall ≈ 57%
+        - F1-score ≈ 0.61
+        - ROC-AUC: ~0.84
+      These numbers mean the model is reasonably strong at separating churners from non-churners.
 
 ---
 
 ## 6. Feature Importance (Key Drivers)
 From the logistic regression coefficients and follow-up analysis:
-
-Tenure
-
-Shorter tenure → higher churn risk
-
-Long-tenure customers are much more stable.
-
-Contract Type
-
-Month-to-month contracts have significantly higher churn probability.
-
-1-year and 2-year contracts show much lower churn.
-
-Charges
-
-Higher MonthlyCharges are associated with higher churn risk.
-
-Payment Method
-
-Certain payment methods (e.g., electronic check) show higher churn than others (e.g., bank transfer, credit card).
-
+* Tenure
+    - Shorter tenure → higher churn risk
+    - Long-tenure customers are much more stable.
+* Contract Type
+    - Month-to-month contracts have significantly higher churn probability.
+    - 1-year and 2-year contracts show much lower churn.
+* Charges
+    - Higher MonthlyCharges are associated with higher churn risk.
+    - Payment Method
+    - Certain payment methods (e.g., electronic check) show higher churn than others (e.g., bank transfer, credit card).
 These drivers are visualized in Tableau.
 
 ---
 
 ## 7. Scored Dataset
-I exported model scores for the test set:
-
-python
-Copy code
+The model scores for the test set are exported
+~~~
 X_test_copy = X_test.copy()
 X_test_copy["churn_actual"] = y_test.values
 X_test_copy["churn_probability"] = y_prob
 X_test_copy.to_csv("data/processed/churn_scored.csv", index=False)
-data/processed/churn_scored.csv is used as the input to Tableau.
+~~~
+"data/processed/churn_scored.csv" is used as the input to Tableau.
 
 Columns include:
-
-churn_actual (0/1)
-
-churn_probability (0–1)
-
+- churn_actual (0/1)
+- churn_probability (0–1)
 plus the original features for each customer in the test set.
+
+---
 
 ## 8. Tableau Dashboard
 Dashboard views (built on churn_scored.csv):
@@ -246,7 +216,6 @@ Recreate or refresh the dashboard.
 
 ## 10. Business Takeaways (Summary)
 The model can reliably rank customers by churn risk (ROC-AUC ≈ 0.84).
-
 Churn is concentrated among:
 
 Short-tenure, month-to-month customers,
